@@ -17,7 +17,8 @@ h1 {
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
-  width: calc(100% - .5rem);
+  width: calc(100% - (100% / 320) * 2);
+  margin: 0;
 }
 .container {
   display: flex;
@@ -36,24 +37,27 @@ h1 {
   flex-wrap: nowrap;
   width: 100%;
   padding: 0;
+  height: 6rem;
 }
 .tr-808 li {
   border: 2px solid #000;
-  margin: .2rem;
-  height: 6rem;
+  margin: calc(100% / 320);
+  height: 100%;
   width: calc(100% / 16);
   position: relative;
 }
 .tr-808 li:before {
   content: '';
   position: absolute;
-  width: .5rem;
-  height: .5rem;
-  border-radius: .75rem;
+  width: 20%;
+  height: 10%;
+  border-radius: 50%;
   background-color: #000;
-  top: 1rem;
-  left: calc(50% - .5rem);
-  border: .25rem solid #000;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border: 2px solid #000;
 }
 .tr-808 li:nth-child(4n-7):before {
   background-color: red;
