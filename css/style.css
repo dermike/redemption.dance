@@ -40,11 +40,16 @@ h1 {
   height: 6rem;
 }
 .tr-808 li {
-  border: 2px solid #000;
+  border: 1px solid #000;
   margin: calc(100% / 320);
   height: 100%;
   width: calc(100% / 16);
   position: relative;
+  transition: transform .3s;
+}
+.tr-808 li.active:nth-child(4n-7) {
+  transform: scale(1.2);
+  z-index: 2;
 }
 .tr-808 li:before {
   content: '';
