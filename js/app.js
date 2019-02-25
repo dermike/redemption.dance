@@ -1,6 +1,7 @@
 (function init() {
   let firstStep = document.querySelector('li'),
     currentStep = firstStep,
+    motion = !matchMedia('(prefers-reduced-motion)').matches,
     runPattern = function runPattern() {
       if (currentStep && currentStep.nextElementSibling) {
         requestAnimationFrame(function addNext() {
@@ -20,13 +21,13 @@
       let tr808 = document.querySelector('ul');
       tr808.style.height = firstStep.offsetWidth * 2 + 'px';
     },
-    animate = setInterval(runPattern, 100),
+    animate = motion ? setInterval(runPattern, 100) : null,
     toggle = function toggle() {
-      if (animate) {
+      if (animate && motion) {
         clearInterval(animate);
         animate = null;
       } else {
-        animate = setInterval(runPattern, 100);
+        animate = motion ? setInterval(runPattern, 100) : null;
       }
     };
   setHeight();
