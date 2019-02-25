@@ -28,7 +28,7 @@
     },
     setHeight = function setHeight() {
       let tr808 = document.querySelector('ul');
-      tr808.style.height = firstStep.offsetWidth * 2 + 'px';
+      tr808.style.height = firstStep.offsetWidth * 1.75 + 'px';
     },
     animate = motion ? setInterval(runPattern, 100) : null,
     toggle = function toggle() {
