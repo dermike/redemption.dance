@@ -3,13 +3,17 @@
     currentStep = firstStep,
     runPattern = function runPattern() {
       if (currentStep && currentStep.nextElementSibling) {
-        currentStep.classList.remove('active');
-        currentStep.nextElementSibling.classList.add('active');
-        currentStep = currentStep.nextElementSibling;
+        requestAnimationFrame(function addNext() {
+          currentStep.classList.remove('active');
+          currentStep.nextElementSibling.classList.add('active');
+          currentStep = currentStep.nextElementSibling;
+        });
       } else {
-        currentStep.classList.remove('active');
-        firstStep.classList.add('active');
-        currentStep = firstStep;
+        requestAnimationFrame(function addFirst() {
+          currentStep.classList.remove('active');
+          firstStep.classList.add('active');
+          currentStep = firstStep;
+        });
       }
     },
     setHeight = function setHeight() {
