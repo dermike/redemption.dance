@@ -47,7 +47,7 @@ h1 {
   position: relative;
   transition: transform .3s;
 }
-.tr-808 li.active:nth-child(4n-7) {
+.tr-808 li.jump {
   transform: scale(1.2);
   z-index: 2;
 }
@@ -64,13 +64,13 @@ h1 {
   margin: 0 auto;
   border: 2px solid #000;
 }
-.tr-808 li:nth-child(4n-7):before {
+.tr-808 li.selected:before {
   background-color: red;
 }
 .tr-808 li.active:before {
   background-color: red;
 }
-.tr-808 li.active:nth-child(4n-7):before {
+.tr-808 li.active.selected:before {
   background-color: #000;
 }
 .red {

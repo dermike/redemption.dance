@@ -3,6 +3,12 @@
     currentStep = firstStep,
     motion = !matchMedia('(prefers-reduced-motion)').matches,
     runPattern = function runPattern() {
+      let jump = function jump(el) {
+        el.classList.add('jump');
+        setTimeout(function r() {
+          el.classList.remove('jump');
+        }, 125);
+      }
       if (currentStep && currentStep.nextElementSibling) {
         requestAnimationFrame(function addNext() {
           currentStep.classList.remove('active');
@@ -15,6 +21,9 @@
           firstStep.classList.add('active');
           currentStep = firstStep;
         });
+      }
+      if (currentStep.classList.contains('selected')) {
+        jump(currentStep);
       }
     },
     setHeight = function setHeight() {
