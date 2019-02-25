@@ -8,7 +8,7 @@
         setTimeout(function r() {
           el.classList.remove('jump');
         }, 125);
-      }
+      };
       if (currentStep && currentStep.nextElementSibling) {
         requestAnimationFrame(function addNext() {
           currentStep.classList.remove('active');
