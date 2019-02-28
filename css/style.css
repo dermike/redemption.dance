@@ -6,13 +6,15 @@ html, body, .container {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: #000;
 }
 body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Open Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 100%;
   color: #fff;
   line-height: 1.5;
+  background-color: #000;
+  background-image: url(../img/808.png);
+  background-size: 100%;
 }
 h1, .info {
   text-transform: uppercase;
@@ -103,9 +105,23 @@ a, a:active, a:hover, a:focus {
 
 .info {
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .info a {
-  flex: 1 0 33%;
   text-align: center;
+  position: relative;
+  margin: 0 .5rem;
+}
+
+.info a:hover:after, .info a:focus:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: red;
+  display: inline-block;
+  position: absolute;
+  left: -16px;
+  top: 7px;
 }
