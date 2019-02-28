@@ -44,8 +44,8 @@ h2 {
   height: 6rem;
 }
 .tr-808 li {
-  border: 1px solid #000;
-  margin: 0 calc(100% / 320);
+  box-shadow: 0 0 2px #000;
+  margin: 0 calc(100% / 256);
   height: 100%;
   width: calc(100% / 16);
   position: relative;
