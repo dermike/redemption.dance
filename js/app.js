@@ -28,10 +28,6 @@
         }, speed);
       }
     },
-    setHeight = function setHeight() {
-      let tr808 = document.querySelector('ul');
-      tr808.style.height = firstStep.offsetWidth * 1.75 + 'px';
-    },
     toggle = function toggle() {
       if (speed) {
         speed = 0;
@@ -40,8 +36,6 @@
         requestAnimationFrame(runPattern);
       }
     };
-  setHeight();
   requestAnimationFrame(runPattern);
-  window.addEventListener('resize', setHeight, false);
   document.querySelector('.tr-808').addEventListener('click', toggle, false);
 })();

@@ -43,7 +43,6 @@ h2 {
   flex-wrap: nowrap;
   width: 100%;
   padding: 0;
-  height: 6rem;
 }
 .tr-808 li {
   box-shadow: 0 0 2px #000;
@@ -62,6 +61,11 @@ h2 {
 .tr-808 li.jump {
   transform: scale(1.2);
   z-index: 2;
+}
+.tr-808 li:after {
+  content: '';
+  display: block;
+  padding-top: 175%;
 }
 .tr-808 li:before {
   content: '';
